@@ -1,6 +1,4 @@
-# GA-Assignment-Submission
-
-Final General Assembly Assignment Submission
+# General Assembly Final Assigment Submission
 
 The was my final submission for the Front-End Web Development course done through General Assembly
 
