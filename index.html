@@ -1,473 +1,841 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Soup Athletica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cabin:400,700"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Soup Athletica</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <script defer src="function.js"></script>
+    <script defer src="modal_form.js"></script>
+    <script defer src="scroll.js"></script>
+    <script defer src="weather_API.js"></script>
+  </head>
 
-  <script defer src="function.js"></script>
-  <script defer src="modal_form.js"></script>
-  <script defer src="scroll.js"></script>
-  <script defer src="weather_API.js"></script>
-  
-</head>
+  <body>
+    <main class="soup-main-container">
+      <!-- --------------------------------------------------------------------------------------------- -->
+      <!-- --------------------------------       Soup Header       ------------------------------------ -->
+      <!-- --------------------------------------------------------------------------------------------- -->
 
-<body>
-<main class="soup-main-container">
-<!-- --------------------------------------------------------------------------------------------- -->
-<!-- --------------------------------       Soup Header       ------------------------------------ -->
-<!-- --------------------------------------------------------------------------------------------- -->
+      <header class="soup-header-container">
+        <nav class="soup-nav">
+          <div class="nav-left">
+            <h4>
+              <a class="soup-header-link product-scroll" href="#">Product</a>
+            </h4>
+            <h4><a class="soup-header-link team-scroll" href="#">Team</a></h4>
+            <h4>
+              <a class="soup-header-link story-scroll" href="#">Stories</a>
+            </h4>
+          </div>
+          <img
+            class="soup-header-image"
+            src="images/Logo/soup-logo.png"
+            alt="Soup logo"
+          />
+          <div class="nav-right">
+            <h4><a class="soup-header-link sign-up" href="#">Sign Up</a></h4>
+            <h4><a class="soup-header-link sign-in" href="#">Sign In</a></h4>
+            <h4><a class="soup-header-link" href="#">Help</a></h4>
+          </div>
+        </nav>
+        <img
+          class="soup-header-button-image menu-image"
+          src="images/Logo/soup-logo.png"
+          alt="Soup logo"
+        />
+        <button id="burger-btn" class="soup-menu-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="17"
+            viewBox="0 0 24 17"
+            aria-label=""
+            class="svg-btn"
+            shape-rendering="geometricPrecision"
+          >
+            <path
+              d="M0 0h24v3H0zm0 7h24v3H0zm0 7h24v3H0z"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </header>
 
-<header class="soup-header-container">
-  <nav class="soup-nav">
-    <div class="nav-left">
-        <h4><a class="soup-header-link product-scroll" href="#">Product</a></h4>
-        <h4><a class="soup-header-link team-scroll" href="#">Team</a></h4>
-        <h4><a class="soup-header-link story-scroll" href="#">Stories</a></h4>
-    </div>
-    <img class="soup-header-image" src="images/Logo/soup-logo.png" alt="Soup logo">
-    <div class="nav-right">
-      <h4><a class="soup-header-link sign-up" href="#">Sign Up</a></h4>
-      <h4><a class="soup-header-link sign-in" href="#">Sign In</a></h4>
-      <h4><a class="soup-header-link" href="#">Help</a></h4>
-    </div>
-  </nav>
-  <img class="soup-header-button-image menu-image" src="images/Logo/soup-logo.png" alt="Soup logo">
-  <button id="burger-btn" class="soup-menu-button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 24 17" aria-label="" class="svg-btn" shape-rendering="geometricPrecision">
-      <path d="M0 0h24v3H0zm0 7h24v3H0zm0 7h24v3H0z" fill-rule="evenodd"></path>
-    </svg>
-  </button>
-</header>
+      <!-- --------------------------------------------------------------------------------------------- -->
+      <!-- ----------------------------       Soup Hero Container        ------------------------------- -->
+      <!-- --------------------------------------------------------------------------------------------- -->
 
-<!-- --------------------------------------------------------------------------------------------- -->
-<!-- ----------------------------       Soup Hero Container        ------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------- -->
-
-<div class="hero-container">
-  <h1 class="hero-title">Soup Athletica</h1>
-  <p>Crafting stories that embrace the <span class="italic"> thrill</span> of the <span class="white"> unknown</span> and a touch of humor.
-    <br> Our goal is to inspire all cyclists, from hobbyists to pros, to <span class="italic"> venture</span> into the
-    <br> great outdoors and enjoy some good times.</p>
-  <a href="#" class="btn-cta cta-search story-scroll">Soup Stories</a>
-  <a href="#" class="btn-cta cta-mobile story-scroll">Stories</a>
-</div>
-
-
-<!-- --------------------------------------------------------------------------------------------- -->
-<!-- --------------------------       Soup Container (Team/Sponser)        ----------------------- -->
-<!-- --------------------------------------------------------------------------------------------- -->
-
-<section class="soup-team-section">
-  <h1><span style="color: white;">Team Soup Athletica</span></h1>
-
-<!-- ------------------------------------ -->
-<!-- ----------   Team List    ---------- -->
-<!-- ------------------------------------ -->
-  <section class="soup-two-boxes-container">
-    <section class="soup-team-container">
-      <div class="scroll-wrapper">
-      <div class="soup-fact-indiv soup-fact-indiv-1">
-        <img src="images/Riders/profile_adrian.jpeg" alt="Adrian Headshot Image">
-        <div>
-          <h3>Adrian</h3>
-          <p>The Founding Father</p>
-        </div>
+      <div class="hero-container">
+        <h1 class="hero-title">Soup Athletica</h1>
+        <p>
+          Crafting stories that embrace the
+          <span class="italic"> thrill</span> of the
+          <span class="white"> unknown</span> and a touch of humor. <br />
+          Our goal is to inspire all cyclists, from hobbyists to pros, to
+          <span class="italic"> venture</span> into the <br />
+          great outdoors and enjoy some good times.
+        </p>
+        <a href="#" class="btn-cta cta-search story-scroll">Soup Stories</a>
+        <a href="#" class="btn-cta cta-mobile story-scroll">Stories</a>
       </div>
-      <div class="soup-fact-indiv soup-fact-indiv-2">
-        <img src="images/Riders/profile_okky.jpeg"  alt="Okky Headshot Image">
-        <div>
-          <h3>Okky</h3>
-          <p>One man, One Gear, All Gradient</p>
-        </div>
-      </div>
-      <div class="soup-fact-indiv soup-fact-indiv-3">
-        <img src="images/Riders/profile_sofia.jpeg" alt="Sofia Headshot Image">
-        <div>
-          <h3>Sofia</h3>
-          <p>Unleashing the Spark Within!</p>
-        </div>
-      </div>
-      <div class="soup-fact-indiv soup-fact-indiv-4">
-        <img src="images/Riders/profile_erin.jpeg" alt="Erin Headshot Image">
-        <div>
-          <h3>Erin</h3>
-          <p>Embracing Elegance with Style!</p>
-        </div>
-      </div>
-      <div class="soup-fact-indiv soup-fact-indiv-5">
-        <img src="images/Riders/profile_aaron.jpeg" alt="Aaron Headshot Image">
-        <div>
-          <h3>Aaron</h3>
-          <p>New Proud Father</p>
-        </div>
-      </div>
-      <div class="soup-fact-indiv soup-fact-indiv-6">
-        <img src="images/Riders/Squad_Photo/profile_team.JPG" alt="Group Image">
-        <div>
-          <h3>Squad</h3>
-          <p>Explore more of the Soup Team Riders</p>
-        </div>
-      </div>
-    </div>
-    </section>
 
-<!-- ------------------------------------ -->
-<!-- ---------   Sponser Box    --------- -->
-<!-- ------------------------------------ -->
-    <section class="soup-sponsor-box">
-      <div class="sponsor-container">
-        <header class="soup-cta-header">
-          <h2>Soup-onship</h2>
-          <hr>
-        </header>
-        <div class="soup-info-container">
-          <ul class="soup-mid-info">
-            <p>Discover the ultimate partnership with Soup Athletica! As a leading creative collective, we weave captivating stories that capture the exhilaration of the unknown, seasoned with a delightful touch of humor. Our mission is to inspire and empower cyclists of all levels, from beginners to professionals, to embrace the great outdoors and relish unforgettable moments. Fuel your cycling passion and unlock new horizons with Soup Athletica by your side. Join the ride of a lifetime and let your dreams soar with our sponsorship!</p>
-            <li>Ride the adventure with Soup Athletica - Where Stories Unfold!</li>
-            <li>Fuel Your Cycling Passion with Soup Athletica - Embrace the Journey</li>
-            <li>Soup Athletica: Igniting Your Cycling Passion!</li>
+      <!-- --------------------------------------------------------------------------------------------- -->
+      <!-- --------------------------       Soup Container (Team/Sponser)        ----------------------- -->
+      <!-- --------------------------------------------------------------------------------------------- -->
+
+      <section class="soup-team-section">
+        <h1><span style="color: white">Team Soup Athletica</span></h1>
+
+        <!-- ------------------------------------ -->
+        <!-- ----------   Team List    ---------- -->
+        <!-- ------------------------------------ -->
+        <section class="soup-two-boxes-container">
+          <section class="soup-team-container">
+            <div class="scroll-wrapper">
+              <div class="soup-fact-indiv soup-fact-indiv-1">
+                <img
+                  src="images/Riders/profile_adrian.jpeg"
+                  alt="Adrian Headshot Image"
+                />
+                <div>
+                  <h3>Adrian</h3>
+                  <p>The Founding Father</p>
+                </div>
+              </div>
+              <div class="soup-fact-indiv soup-fact-indiv-2">
+                <img
+                  src="images/Riders/profile_okky.jpeg"
+                  alt="Okky Headshot Image"
+                />
+                <div>
+                  <h3>Okky</h3>
+                  <p>One man, One Gear, All Gradient</p>
+                </div>
+              </div>
+              <div class="soup-fact-indiv soup-fact-indiv-3">
+                <img
+                  src="images/Riders/profile_sofia.jpeg"
+                  alt="Sofia Headshot Image"
+                />
+                <div>
+                  <h3>Sofia</h3>
+                  <p>Unleashing the Spark Within!</p>
+                </div>
+              </div>
+              <div class="soup-fact-indiv soup-fact-indiv-4">
+                <img
+                  src="images/Riders/profile_erin.jpeg"
+                  alt="Erin Headshot Image"
+                />
+                <div>
+                  <h3>Erin</h3>
+                  <p>Embracing Elegance with Style!</p>
+                </div>
+              </div>
+              <div class="soup-fact-indiv soup-fact-indiv-5">
+                <img
+                  src="images/Riders/profile_aaron.jpeg"
+                  alt="Aaron Headshot Image"
+                />
+                <div>
+                  <h3>Aaron</h3>
+                  <p>New Proud Father</p>
+                </div>
+              </div>
+              <div class="soup-fact-indiv soup-fact-indiv-6">
+                <img
+                  src="images/Riders/Squad_Photo/profile_team.JPG"
+                  alt="Group Image"
+                />
+                <div>
+                  <h3>Squad</h3>
+                  <p>Explore more of the Soup Team Riders</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ------------------------------------ -->
+          <!-- ---------   Sponser Box    --------- -->
+          <!-- ------------------------------------ -->
+          <section class="soup-sponsor-box">
+            <div class="sponsor-container">
+              <header class="soup-cta-header">
+                <h2>Soup-onship</h2>
+                <hr />
+              </header>
+              <div class="soup-info-container">
+                <ul class="soup-mid-info">
+                  <p>
+                    Discover the ultimate partnership with Soup Athletica! As a
+                    leading creative collective, we weave captivating stories
+                    that capture the exhilaration of the unknown, seasoned with
+                    a delightful touch of humor. Our mission is to inspire and
+                    empower cyclists of all levels, from beginners to
+                    professionals, to embrace the great outdoors and relish
+                    unforgettable moments. Fuel your cycling passion and unlock
+                    new horizons with Soup Athletica by your side. Join the ride
+                    of a lifetime and let your dreams soar with our sponsorship!
+                  </p>
+                  <li>
+                    Ride the adventure with Soup Athletica - Where Stories
+                    Unfold!
+                  </li>
+                  <li>
+                    Fuel Your Cycling Passion with Soup Athletica - Embrace the
+                    Journey
+                  </li>
+                  <li>Soup Athletica: Igniting Your Cycling Passion!</li>
+                </ul>
+                <a href="#" class="btn-cta soup-contact">Contact Us</a>
+              </div>
+              <p class="soup-blurb">
+                All services performed by Soup are backed by the Soup Father.
+                <br />
+                More info on our <a href="#">Soup-onship T&C</a>.
+              </p>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <!-- --------------------------------------------------------------------------------------------- -->
+      <!-- ---------------------------       Soup Product Container        ----------------------------- -->
+      <!-- --------------------------------------------------------------------------------------------- -->
+
+      <!-- ------------------------------------ -->
+      <!-- ---------   Product Intro   -------- -->
+      <!-- ------------------------------------ -->
+
+      <section class="soup-product-container">
+        <div class="soup-product-quote-container">
+          <p class="soup-quote">
+            Introducing La Maglia Soup Athletica by Pedla – artfully adorned
+            with patterns, inspired by the charm of nonna's kitchens and the
+            beauty of Italian tile work. <span>Nonna.</span>
+          </p>
+          <p>The Pedla LunaLUXE Jersey <a href="#">Learn More</a></p>
+        </div>
+        <div class="soup-product-mobile-container">
+          <p class="soup-quote-mobile">
+            La Maglia Soup Athletica LUXE: Embrace Italian elegance with
+            super-soft stretch and featherweight sleeves for all-day comfort,
+            from sun to chill. Bellissimo!
+          </p>
+          <p>The Pedla LunaLUXE Jersey <a href="#">Learn More</a></p>
+        </div>
+      </section>
+
+      <!-- ------------------------------------ -->
+      <!-- -------   Product Collage   -------- -->
+      <!-- ------------------------------------ -->
+
+      <h1 class="product-heading">
+        Soup Athletica <span style="font-style: italic">Luxe</span> Jersey
+      </h1>
+      <section class="product-collage">
+        <div class="collage-wheel p-photo-1">
+          <img
+            src="images/Luxe_Jersey/portrait_1.jpg"
+            width="231"
+            height="397"
+            alt="Laying Down Jersey"
+          />
+        </div>
+        <div class="collage-wheel p-photo-2">
+          <img
+            src="images/Luxe_Jersey/portrait_2.jpeg"
+            width="231"
+            height="397"
+            alt="Laying Down Jersey"
+          />
+        </div>
+        <div class="collage-wheel p-photo-3">
+          <img
+            src="images/Luxe_Jersey/portrait_3.jpg"
+            width="231"
+            height="397"
+            alt="Laying Down Jersey"
+          />
+        </div>
+        <div class="collage-wheel p-photo-4">
+          <img
+            src="images/Luxe_Jersey/portrait_4.jpg"
+            width="231"
+            height="397"
+            alt="Laying Down Jersey"
+          />
+        </div>
+        <div class="collage-wheel p-photo-5">
+          <img
+            src="images/Luxe_Jersey/portrait_5.jpeg"
+            width="231"
+            height="397"
+            alt="Laying Down Jersey"
+          />
+        </div>
+        <video id="lux-video" class="collage-wheel video-lux" controls>
+          <source src="images/Video/soup_lux_vid.mov" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="mobile-wheel p-photo-6">
+          <img
+            src="images/Luxe_Jersey/portrait_6.png"
+            width="600"
+            height="600"
+            alt="Laying Down Jersey"
+          />
+        </div>
+      </section>
+
+      <!-- --------------------------------------------------------------------------------------------- -->
+      <!-- ----------------------------       Soup Story Container        ------------------------------ -->
+      <!-- --------------------------------------------------------------------------------------------- -->
+
+      <section class="soup-story-container">
+        <h2 class="soup-story-container-title">Tour de Soup</h2>
+        <div class="soup-story-scroll-container">
+          <div class="soup-story-item-container">
+            <div class="soup-story-item">
+              <a class="route-image image-api" href="#" data-location="Echuca"
+                ><img
+                  src="images/Routes/420_pilgram_route.png"
+                  width="953"
+                  height="300"
+                  alt="Route Image"
+              /></a>
+              <img
+                class="story-image"
+                src="images/Landscape_Shots/story_1.jpg"
+                width="952"
+                height="651"
+                alt="search"
+              />
+              <div>
+                <h3><a href="#">Tour de Dirty 420 Pilgrimage</a></h3>
+                <hr />
+                <p>
+                  This tale commences in the harmonious twin towns of Echuca
+                  Moama, gracefully at 11.30 am on a delightful Friday. Poised
+                  outside the esteemed Dan Murphy's in Echuca, a rented Kia SUV
+                  exudes elegance, encircled by bicycles, their doors and boot
+                  graciously ajar. On one side of the exquisite vehicle, the
+                  first of three riders, Okky, sits atop a resplendent green
+                  Prova, meticulously adjusting the connectivity of his petite
+                  Bluetooth speaker. On the other side, Aaron, the second rider,
+                  bestows his attention on the seat post of his borrowed Baum
+                  with utmost finesse. Meanwhile, a lonesome Bastion adorns the
+                  forefront of the Kia, as its rider, the gallant Adrian,
+                  ventures through the charming main street of Echuca in pursuit
+                  of a bike shop, regretting the inadvertent omission of his
+                  helmet at home.
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+
+            <div class="soup-story-item">
+              <a class="route-image-1 image-api" href="#" data-location="Bright"
+                ><img
+                  src="images/Routes/2018_WNTRSLTC.png"
+                  width="953"
+                  height="300"
+                  alt="Route Image"
+              /></a>
+              <img
+                class="story-image-1"
+                src="images/Landscape_Shots/story_2.jpg"
+                width="952"
+                height="651"
+                alt="phone"
+              />
+              <div>
+                <h3><a href="#">The 2018 WNTRSLSTC</a></h3>
+                <hr />
+                <p>
+                  Fast forward to the present day - winter 2018, and a lot has
+                  changed. Our 2014 project served as the catalyst for
+                  jumpstarting our website, while Tourism North East has
+                  thrived, creating the kick-ass brand Ride High Country and
+                  continuously expanding 7 Peaks. Like long-lost lovers
+                  reunited, we now come together for the third running of the
+                  Soup Boys #wntrslstc. It's a celebration of the region, a
+                  chance to pay our deepest respects and gratitude to the Mitta,
+                  Kiewa, and Ovens Valleys - three pockets of the country we
+                  genuinely believe are, by and large, the absolute best. This
+                  journey that began as a group of enthusiastic adventurers has
+                  evolved into something extraordinary, and we couldn't be more
+                  grateful for the experiences we've shared.
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+
+            <div class="soup-story-item">
+              <a
+                class="route-image-2 image-api"
+                href="#"
+                data-location="Creswick"
+                ><img
+                  src="images/Routes/creswick_route.png"
+                  width="953"
+                  height="300"
+                  alt="Route Image"
+              /></a>
+              <img
+                class="story-image-2"
+                src="images/Landscape_Shots/story_3.JPG"
+                width="952"
+                height="651"
+                alt="shield"
+              />
+              <div>
+                <h3><a href="#">Creswick Gravel</a></h3>
+                <hr />
+                <p>
+                  Adrian crashed within the first 10 minutes, and the ride from
+                  Ballarat to Creswick became a memorable struggle, plagued by
+                  broken spokes and punctures. It was an unfortunate ordeal that
+                  left us hesitant to come back. However, after time has passed
+                  and with newfound confidence, we finally return, this time
+                  equipped with gravel bikes. Here we are now, a group of six,
+                  ready to explore Creswick once more on a brisk Sunday morning,
+                  as the Main Street of Creswick slowly awakens. Thankfully, the
+                  IGA is open for us, providing a promising start to our new
+                  adventure.
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+
+            <div class="soup-story-item">
+              <a
+                class="route-image-3 image-api"
+                href="#"
+                data-location="Wagga Wagga"
+                ><img
+                  src="images/Routes/dirty_130.png"
+                  width="953"
+                  height="300"
+                  alt="Route Image"
+              /></a>
+              <img
+                class="story-image-3"
+                src="images/Landscape_Shots/story_4.jpeg"
+                width="952"
+                height="651"
+                alt="phone"
+              />
+              <div>
+                <h3><a href="#">Chasing The Dirty 130</a></h3>
+                <hr />
+                <p>
+                  We had the wind on our backs leaving Coolamon, lending a much
+                  needed helping hand on the return to the finish line in Wagga.
+                  Lunch, soft grass to lay upon, and a swim in the river weren't
+                  far away. Dead Camel Lane provided a moment of technical
+                  concentration that the wider, mostly straight sections hadn't
+                  called upon from the days previous. The roots, rocks and ruts
+                  climbing up Dead Camel Lane provided enough of a challenge,
+                  but the biggest was yet to come – another sit down with Mike
+                  Tomalaris, adding enough fire into the bellies of all of us
+                  that we were able to push on to the finish line. The end was
+                  near.
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+
+            <div class="soup-story-item">
+              <a
+                class="route-image-4 image-api"
+                href="#"
+                data-location="Beechworth"
+                ><img
+                  src="images/Routes/2019_WNTRSLTC.png"
+                  width="953"
+                  height="300"
+                  alt="Route Image"
+              /></a>
+              <img
+                class="story-image-4"
+                src="images/Landscape_Shots/story_5.jpg"
+                width="952"
+                height="651"
+                alt="phone"
+              />
+              <div>
+                <h3><a href="#">2019 WNTRSLSTC</a></h3>
+                <hr />
+                <p>
+                  Friday night in Bright, a fresh experience for us this time of
+                  year. We invited others for the fourth running of the
+                  WNTRSLSTC, hoping they'd join despite using snowy shots from
+                  2018 in our "campaign." Adrian and Josh did a quick supó run
+                  for snacks and sustenance. At the Bogong View Motor Inn, we
+                  settled in for our earliest Solstice Eve rest. Harry joined us
+                  early after a close encounter with wildlife on his drive from
+                  Yea.
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+
+            <div class="soup-story-item">
+              <a class="route-image-5 image-api" href="#" data-location="Hotham"
+                ><img
+                  src="images/Routes/hotham_route.png"
+                  width="953"
+                  height="300"
+                  alt="Route Image"
+              /></a>
+              <img
+                class="story-image-5"
+                src="images/Landscape_Shots/stroy_6.jpg"
+                width="952"
+                height="651"
+                alt="phone"
+              />
+              <div>
+                <h3><a href="#">The Ultimate Guide To: Mount Hotham</a></h3>
+                <hr />
+                <p>
+                  Mount Hotham, an imposing climb in Australia, needs little
+                  introduction due to its #brand #mythology. It has been
+                  featured in various cycling events, playing a significant role
+                  in our own cycling journey. For Alex, it was the first-ever
+                  climb, and we've experienced it at sunset, as well as during
+                  long rides. Early December offered a chance to add another
+                  stamp to our 7 Peaks journey. A week after the Tour of Bright,
+                  we gathered in Harrietville, a Hamptons-esque* town, for our
+                  second ride in this series. Nearly 30 riders joined, many
+                  experiencing Hotham for the first time, preparing for their
+                  maiden 3 Peaks Challenge. Freshly brewed coffee from Everyday
+                  Coffee did little to calm pre-climb nerves.
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- --------------------------------------------------------------------------------------------- -->
+    <!-- ------------------------------       Footer Container        -------------------------------- -->
+    <!-- --------------------------------------------------------------------------------------------- -->
+
+    <footer class="foot-container">
+      <div class="footer">
+        <div class="footer-section">
+          <h3 class="footer-heading">Follow us</h3>
+          <hr />
+          <ul class="social-links">
+            <li><a href="#" class="social-link">Facebook</a></li>
+            <li><a href="#" class="social-link">Twitter</a></li>
+            <li><a href="#" class="social-link">Instagram</a></li>
+            <li><a href="#" class="social-link">LinkedIn</a></li>
           </ul>
-          <a href="#" class="btn-cta soup-contact">Contact Us</a>
         </div>
-        <p class="soup-blurb">All services performed by Soup are backed by the Soup Father. <br> More info on our <a href="#">Soup-onship T&C</a>.</p>
+        <div class="footer-section">
+          <h3 class="footer-heading">Navigation</h3>
+          <hr />
+          <ul class="nav-links">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link team-scroll">Team</a></li>
+            <li><a href="#" class="nav-link story-scroll">Stories</a></li>
+            <li><a href="#" class="nav-link sign-up">Sign Up</a></li>
+            <li><a href="#" class="nav-link soup-contact">Contact Us</a></li>
+            <li><a href="#" class="nav-link">Help</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-heading">Journal Subscription</h3>
+          <hr />
+          <p>
+            Subscribe to our Journal to get the latest stories and what we get
+            up to.
+          </p>
+          <form action="#" class="newsletter-form">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              class="newsletter-input"
+            />
+            <button type="submit" class="newsletter-button">Subscribe</button>
+          </form>
+        </div>
       </div>
-    </section>
-  </section>
-</section>
-
-<!-- --------------------------------------------------------------------------------------------- -->
-<!-- ---------------------------       Soup Product Container        ----------------------------- -->
-<!-- --------------------------------------------------------------------------------------------- -->
-
-<!-- ------------------------------------ -->
-<!-- ---------   Product Intro   -------- -->
-<!-- ------------------------------------ -->
-
-<section class="soup-product-container">
-  <div class="soup-product-quote-container">
-    <p class="soup-quote">Introducing La Maglia Soup Athletica by Pedla – artfully adorned with patterns, inspired by the charm of nonna's kitchens and the beauty of Italian tile work.
-      <span>Nonna.</span></p>
-    <p>The Pedla LunaLUXE Jersey <a href="#">Learn More</a></p>
-    </div>
-  <div class="soup-product-mobile-container">
-    <p class="soup-quote-mobile">La Maglia Soup Athletica LUXE: Embrace Italian elegance with super-soft stretch and featherweight sleeves for all-day comfort, from sun to chill. Bellissimo!</p>
-    <p>The Pedla LunaLUXE Jersey <a href="#">Learn More</a></p>
-  </div>
-</section>
-
-<!-- ------------------------------------ -->
-<!-- -------   Product Collage   -------- -->
-<!-- ------------------------------------ -->
-
-  <h1 class="product-heading">Soup Athletica <span style="font-style: italic;">Luxe</span> Jersey</h1>
-<section class="product-collage">
-  <div class="collage-wheel p-photo-1">
-    <img src="images/Luxe_Jersey/portrait_1.jpg" width="231" height="397" alt="Laying Down Jersey">
-  </div>
-  <div class="collage-wheel p-photo-2">
-    <img src="images/Luxe_Jersey/portrait_2.jpeg" width="231" height="397" alt="Laying Down Jersey">
-  </div>
-  <div class="collage-wheel p-photo-3">
-    <img src="images/Luxe_Jersey/portrait_3.jpg" width="231" height="397" alt="Laying Down Jersey">
-  </div>
-  <div class="collage-wheel p-photo-4">
-    <img src="images/Luxe_Jersey/portrait_4.jpg" width="231" height="397" alt="Laying Down Jersey">
-  </div>
-  <div class="collage-wheel p-photo-5">
-    <img src="images/Luxe_Jersey/portrait_5.jpeg" width="231" height="397" alt="Laying Down Jersey">
-  </div>
-  <video id="lux-video" class="collage-wheel video-lux" controls>
-    <source src="images/Video/soup_lux_vid.mov" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="mobile-wheel p-photo-6">
-    <img src="images/Luxe_Jersey/portrait_6.png" width="600" height="600"  alt="Laying Down Jersey">
-  </div>
-</section>
-
-<!-- --------------------------------------------------------------------------------------------- -->
-<!-- ----------------------------       Soup Story Container        ------------------------------ -->
-<!-- --------------------------------------------------------------------------------------------- -->
-
-<section class="soup-story-container">
-  <h2 class="soup-story-container-title">Tour de Soup</h2>
-  <div class="soup-story-scroll-container">
-  <div class="soup-story-item-container">
-
-    <div class="soup-story-item">
-      <a class="route-image image-api" href="#" data-location="Echuca"><img src="images/Routes/420_pilgram_route.png" width="953" height="300" alt="Route Image"></a>
-      <img class="story-image" src="images/Landscape_Shots/story_1.jpg" width="952" height="651" alt="search">
-      <div>
-        <h3><a href="#">Tour de Dirty 420 Pilgrimage</a></h3>
-        <hr>
-        <p>This tale commences in the harmonious twin towns of Echuca Moama, gracefully at 11.30 am on a delightful Friday. Poised outside the esteemed Dan Murphy's in Echuca, a rented Kia SUV exudes elegance, encircled by bicycles, their doors and boot graciously ajar. On one side of the exquisite vehicle, the first of three riders, Okky, sits atop a resplendent green Prova, meticulously adjusting the connectivity of his petite Bluetooth speaker. On the other side, Aaron, the second rider, bestows his attention on the seat post of his borrowed Baum with utmost finesse. Meanwhile, a lonesome Bastion adorns the forefront of the Kia, as its rider, the gallant Adrian, ventures through the charming main street of Echuca in pursuit of a bike shop, regretting the inadvertent omission of his helmet at home.</p><a href="#">Read More</a>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2014 Soup <span class="strikeout"> Boys</span> Athletica. All
+          rights reserved.
+        </p>
       </div>
-    </div>
+    </footer>
 
-    <div class="soup-story-item">
-      <a class="route-image-1 image-api" href="#" data-location="Bright"><img src="images/Routes/2018_WNTRSLTC.png" width="953" height="300" alt="Route Image"></a>
-      <img class="story-image-1" src="images/Landscape_Shots/story_2.jpg" width="952" height="651" alt="phone">
-      <div>
-        <h3><a href="#">The 2018 WNTRSLSTC</a></h3>
-        <hr>
-        <p>Fast forward to the present day - winter 2018, and a lot has changed. Our 2014 project served as the catalyst for jumpstarting our website, while Tourism North East has thrived, creating the kick-ass brand Ride High Country and continuously expanding 7 Peaks. Like long-lost lovers reunited, we now come together for the third running of the Soup Boys #wntrslstc. It's a celebration of the region, a chance to pay our deepest respects and gratitude to the Mitta, Kiewa, and Ovens Valleys - three pockets of the country we genuinely believe are, by and large, the absolute best. This journey that began as a group of enthusiastic adventurers has evolved into something extraordinary, and we couldn't be more grateful for the experiences we've shared.</p><a href="#">Read More</a>
-      </div>
-    </div>
+    <!-- --------------------------------------------------------------------------------------------- -->
+    <!-- -----------------------------       Up Arrow Container        ------------------------------- -->
+    <!-- --------------------------------------------------------------------------------------------- -->
 
-    <div class="soup-story-item">
-      <a class="route-image-2 image-api" href="#" data-location="Creswick"><img src="images/Routes/creswick_route.png" width="953" height="300" alt="Route Image"></a>
-      <img class="story-image-2" src="images/Landscape_Shots/story_3.JPG" width="952" height="651" alt="shield">
-      <div>
-        <h3><a href="#">Creswick Gravel</a></h3>
-        <hr>
-        <p>Adrian crashed within the first 10 minutes, and the ride from Ballarat to Creswick became a memorable struggle, plagued by broken spokes and punctures. It was an unfortunate ordeal that left us hesitant to come back. However, after time has passed and with newfound confidence, we finally return, this time equipped with gravel bikes. Here we are now, a group of six, ready to explore Creswick once more on a brisk Sunday morning, as the Main Street of Creswick slowly awakens. Thankfully, the IGA is open for us, providing a promising start to our new adventure.</p><a href="#">Read More</a>
-      </div>
-    </div>
-
-    <div class="soup-story-item">
-      <a class="route-image-3 image-api" href="#" data-location="Wagga Wagga"><img src="images/Routes/dirty_130.png" width="953" height="300" alt="Route Image"></a>
-      <img class="story-image-3" src="images/Landscape_Shots/story_4.jpeg" width="952" height="651" alt="phone">
-      <div>
-        <h3><a href="#">Chasing The Dirty 130</a></h3>
-        <hr>
-        <p>We had the wind on our backs leaving Coolamon, lending a much needed helping hand on the return to the finish line in Wagga. Lunch, soft grass to lay upon, and a swim in the river weren't far away. Dead Camel Lane provided a moment of technical concentration that the wider, mostly straight sections hadn't called upon from the days previous. The roots, rocks and ruts climbing up Dead Camel Lane provided enough of a challenge, but the biggest was yet to come – another sit down with Mike Tomalaris, adding enough fire into the bellies of all of us that we were able to push on to the finish line. The end was near.</p><a href="#">Read More</a>
-      </div>
-    </div>
-
-    <div class="soup-story-item">
-      <a class="route-image-4 image-api" href="#" data-location="Beechworth"><img src="images/Routes/2019_WNTRSLTC.png" width="953" height="300" alt="Route Image"></a>
-      <img class="story-image-4" src="images/Landscape_Shots/story_5.jpg" width="952" height="651" alt="phone">
-      <div>
-        <h3><a href="#">2019 WNTRSLSTC</a></h3>
-        <hr>
-        <p>Friday night in Bright, a fresh experience for us this time of year. We invited others for the fourth running of the WNTRSLSTC, hoping they'd join despite using snowy shots from 2018 in our "campaign." Adrian and Josh did a quick supó run for snacks and sustenance. At the Bogong View Motor Inn, we settled in for our earliest Solstice Eve rest. Harry joined us early after a close encounter with wildlife on his drive from Yea.</p><a href="#">Read More</a>
-      </div>
-    </div>
-
-    <div class="soup-story-item">
-      <a class="route-image-5 image-api" href="#" data-location="Hotham"><img src="images/Routes/hotham_route.png" width="953" height="300" alt="Route Image"></a>
-      <img class="story-image-5" src="images/Landscape_Shots/stroy_6.jpg" width="952" height="651" alt="phone">
-      <div>
-        <h3><a href="#">The Ultimate Guide To: Mount Hotham</a></h3>
-        <hr>
-        <p>Mount Hotham, an imposing climb in Australia, needs little introduction due to its #brand #mythology. It has been featured in various cycling events, playing a significant role in our own cycling journey. For Alex, it was the first-ever climb, and we've experienced it at sunset, as well as during long rides. Early December offered a chance to add another stamp to our 7 Peaks journey. A week after the Tour of Bright, we gathered in Harrietville, a Hamptons-esque* town, for our second ride in this series. Nearly 30 riders joined, many experiencing Hotham for the first time, preparing for their maiden 3 Peaks Challenge. Freshly brewed coffee from Everyday Coffee did little to calm pre-climb nerves.</p><a href="#">Read More</a>
-      </div>
-    </div>
-
-  </div>
-</div>
-</section>
-</main>
-
-<!-- --------------------------------------------------------------------------------------------- -->
-<!-- ------------------------------       Footer Container        -------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------- -->
-
-<footer class="foot-container">
-  <div class="footer">
-    <div class="footer-section">
-      <h3 class="footer-heading">Follow us</h3>
-      <hr>
-      <ul class="social-links">
-        <li><a href="#" class="social-link">Facebook</a></li>
-        <li><a href="#" class="social-link">Twitter</a></li>
-        <li><a href="#" class="social-link">Instagram</a></li>
-        <li><a href="#" class="social-link">LinkedIn</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h3 class="footer-heading">Navigation</h3>
-      <hr>
-      <ul class="nav-links">
-        <li><a href="#" class="nav-link">Home</a></li>
-        <li><a href="#" class="nav-link team-scroll">Team</a></li>
-        <li><a href="#" class="nav-link story-scroll">Stories</a></li>
-        <li><a href="#" class="nav-link sign-up">Sign Up</a></li>
-        <li><a href="#" class="nav-link soup-contact">Contact Us</a></li>
-        <li><a href="#" class="nav-link">Help</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h3 class="footer-heading">Journal Subscription</h3>
-      <hr>
-      <p>Subscribe to our Journal to get the latest stories and what we get up to.</p>
-      <form action="#" class="newsletter-form">
-        <input type="email" name="email" placeholder="Your Email" class="newsletter-input">
-        <button type="submit" class="newsletter-button">Subscribe</button>
-      </form>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2014 Soup <span class="strikeout"> Boys</span> Athletica. All rights reserved.</p>
-  </div>
-</footer>
-
-<!-- --------------------------------------------------------------------------------------------- -->
-<!-- -----------------------------       Up Arrow Container        ------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------- -->
-
-<!-- Up Arrow -->
-<button id="scrollToTopButton" title="Scroll to Top">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
-    <line x1="12" y1="19" x2="12" y2="5"></line>
-    <polyline points="5 12 12 5 19 12"></polyline>
-  </svg>
-</button>
-
-<!-- --------------------------------------------------------------------------------------------- -->
-<!-- -------------------------------       Modal Section        ---------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------- -->
-
-<!-- ------------------------------------ -->
-<!-- ---   Sponsor Box (Contact Us)   --- -->
-<!-- ------------------------------------ -->
-
-<div id="modal-sponser-box" class="modal-container">
-  <div class="modal-register"></div>
-  <div class="modal-inner-container">
-    <button class="modal-close">
-      <svg xmlns="http://www.w3.org/2000/svg" class="close-icon" viewBox="0 0 30 30" width="30px" height="30px">    <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"/></svg>
+    <!-- Up Arrow -->
+    <button id="scrollToTopButton" title="Scroll to Top">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-up"
+      >
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
     </button>
-    <div class="modal-content">
-      <form class="sign-up-form">
-        <h2>Soup-onship Enquiry</h2>
-        <div class="form-fields">
 
-          <label for="sponser-first-name">First Name</label>
-          <input type="text" id="sponser-first-name" placeholder="First Name">
+    <!-- --------------------------------------------------------------------------------------------- -->
+    <!-- -------------------------------       Modal Section        ---------------------------------- -->
+    <!-- --------------------------------------------------------------------------------------------- -->
 
-          <label for="sponser-last-name">Last Name</label>
-          <input type="text" id="sponser-last-name" placeholder="Last Name">
+    <!-- ------------------------------------ -->
+    <!-- ---   Sponsor Box (Contact Us)   --- -->
+    <!-- ------------------------------------ -->
 
-          <label for="sponse-remail">Email</label>
-          <input type="text" id="sponser-email" placeholder="support@soup.com">
+    <div id="modal-sponser-box" class="modal-container">
+      <div class="modal-register"></div>
+      <div class="modal-inner-container">
+        <button class="modal-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="close-icon"
+            viewBox="0 0 30 30"
+            width="30px"
+            height="30px"
+          >
+            <path
+              d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"
+            />
+          </svg>
+        </button>
+        <div class="modal-content">
+          <form class="sign-up-form">
+            <h2>Soup-onship Enquiry</h2>
+            <div class="form-fields">
+              <label for="sponser-first-name">First Name</label>
+              <input
+                type="text"
+                id="sponser-first-name"
+                placeholder="First Name"
+              />
 
-          <label for="tel">Contact Number</label>
-          <input type="tel" id="tel" placeholder="Mobile Number">
+              <label for="sponser-last-name">Last Name</label>
+              <input
+                type="text"
+                id="sponser-last-name"
+                placeholder="Last Name"
+              />
 
-          <label for="introduction">Introduction</label>
-          <textarea name="message" id="introduction" type="text" cols="30" rows="10"></textarea>
+              <label for="sponse-remail">Email</label>
+              <input
+                type="text"
+                id="sponser-email"
+                placeholder="support@soup.com"
+              />
 
-          <button class="soup-button submit-button" type="submit">Submit</button>
+              <label for="tel">Contact Number</label>
+              <input type="tel" id="tel" placeholder="Mobile Number" />
+
+              <label for="introduction">Introduction</label>
+              <textarea
+                name="message"
+                id="introduction"
+                type="text"
+                cols="30"
+                rows="10"
+              ></textarea>
+
+              <button class="soup-button submit-button" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- ------------------------------------ -->
-<!-- ---------   Sign In Box    --------- -->
-<!-- ------------------------------------ -->
+    <!-- ------------------------------------ -->
+    <!-- ---------   Sign In Box    --------- -->
+    <!-- ------------------------------------ -->
 
-<div id="modal-sign-in-box" class="modal-container">
-  <div class="modal-sign-in"></div>
-  <div class="modal-inner-container">
-    <button class="modal-close">
-      <svg xmlns="http://www.w3.org/2000/svg" class="close-icon" viewBox="0 0 30 30" width="30px" height="30px">    <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"/></svg>
-    </button>
-    <div class="modal-content">
-      <form class="sign-in-form">
-        <h2>Sign In</h2>
-        <div class="form-fields">
+    <div id="modal-sign-in-box" class="modal-container">
+      <div class="modal-sign-in"></div>
+      <div class="modal-inner-container">
+        <button class="modal-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="close-icon"
+            viewBox="0 0 30 30"
+            width="30px"
+            height="30px"
+          >
+            <path
+              d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"
+            />
+          </svg>
+        </button>
+        <div class="modal-content">
+          <form class="sign-in-form">
+            <h2>Sign In</h2>
+            <div class="form-fields">
+              <label for="username">User Name</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Username or Email"
+                required
+              />
 
-          <label for="username">User Name</label>
-          <input type="text" id="username" placeholder="Username or Email" required>
+              <label for="enter-password">Password</label>
+              <input
+                type="password"
+                id="enter-password"
+                placeholder="Password"
+                required
+              />
 
-          <label for="enter-password">Password</label>
-          <input type="password" id="enter-password" placeholder="Password" required>
-
-          <button class="soup-button submit-button" type="submit">Submit</button>
+              <button class="soup-button submit-button" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- ------------------------------------ -->
-<!-- ---------   Sign up Box    --------- -->
-<!-- ------------------------------------ -->
+    <!-- ------------------------------------ -->
+    <!-- ---------   Sign up Box    --------- -->
+    <!-- ------------------------------------ -->
 
-<div id="modal-sign-up-box" class="modal-container">
-  <div class="modal-sign-up"></div>
-  <div class="modal-inner-container">
-    <button class="modal-close">
-      <svg xmlns="http://www.w3.org/2000/svg" class="close-icon" viewBox="0 0 30 30" width="30px" height="30px">    <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"/></svg>
-    </button>
-    <div class="modal-content">
-      <form class="sign-in-form">
-        <h2>Sign Up</h2>
-        <div class="form-fields">
+    <div id="modal-sign-up-box" class="modal-container">
+      <div class="modal-sign-up"></div>
+      <div class="modal-inner-container">
+        <button class="modal-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="close-icon"
+            viewBox="0 0 30 30"
+            width="30px"
+            height="30px"
+          >
+            <path
+              d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"
+            />
+          </svg>
+        </button>
+        <div class="modal-content">
+          <form class="sign-in-form">
+            <h2>Sign Up</h2>
+            <div class="form-fields">
+              <label for="create-first-name">First Name</label>
+              <input
+                type="text"
+                id="create-first-name"
+                placeholder="First Name"
+                required
+              />
 
-          <label for="create-first-name">First Name</label>
-          <input type="text" id="create-first-name" placeholder="First Name" required>
+              <label for="create-last-name">Last Name</label>
+              <input
+                type="text"
+                id="create-last-name"
+                placeholder="Last Name"
+              />
 
-          <label for="create-last-name">Last Name</label>
-          <input type="text" id="create-last-name" placeholder="Last Name">
+              <label for="sign-up-email">Email</label>
+              <input
+                type="text"
+                id="sign-up-email"
+                placeholder="support@soup.com"
+                required
+              />
 
-          <label for="sign-up-email">Email</label>
-          <input type="text" id="sign-up-email" placeholder="support@soup.com" required>
+              <label for="create-password">Password</label>
+              <input
+                type="password"
+                id="create-password"
+                placeholder="Password"
+                required
+              />
 
-          <label for="create-password">Password</label>
-          <input type="password" id="create-password" placeholder="Password" required>
+              <label for="gender">Gender:</label>
+              <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
 
-          <label for="gender">Gender:</label>
-          <select id="gender" name="gender" required>
-            <option value="">Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
+              <label for="mailinglist">Journal Newsletter</label>
+              <select id="mailinglist" name="mailinglist" required>
+                <option value="">Choose</option>
+                <option value="male">Yes</option>
+                <option value="female">No</option>
+              </select>
 
-          <label for="mailinglist">Journal Newsletter</label>
-          <select id="mailinglist" name="mailinglist" required>
-            <option value="">Choose</option>
-            <option value="male">Yes</option>
-            <option value="female">No</option>
-          </select>
-
-          <fieldset class="preference">
-            <legend>Riding Preference</legend>
-            <label>
-              <input type="radio" name="option" value="option1" required>
-              Road Cycling
-            </label>
-            <label>
-              <input type="radio" name="option" value="option2" required>
-              Track Cycling
-            </label>
-            <label>
-              <input type="radio" name="option" value="option3" required>
-              Cross/Gravel Cycling
-            </label>
-            <label>
-              <input type="radio" name="option" value="option3" required>
-              Mountain Bike (MTB) Cycling
-            </label>
-          </fieldset>
-          <button class="soup-button submit-button" type="submit">Submit</button>
+              <fieldset class="preference">
+                <legend>Riding Preference</legend>
+                <label>
+                  <input type="radio" name="option" value="option1" required />
+                  Road Cycling
+                </label>
+                <label>
+                  <input type="radio" name="option" value="option2" required />
+                  Track Cycling
+                </label>
+                <label>
+                  <input type="radio" name="option" value="option3" required />
+                  Cross/Gravel Cycling
+                </label>
+                <label>
+                  <input type="radio" name="option" value="option3" required />
+                  Mountain Bike (MTB) Cycling
+                </label>
+              </fieldset>
+              <button class="soup-button submit-button" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- ------------------------------------ -->
-<!-- -------   Weather API Box    ------- -->
-<!-- ------------------------------------ -->
+    <!-- ------------------------------------ -->
+    <!-- -------   Weather API Box    ------- -->
+    <!-- ------------------------------------ -->
 
-<div id="weatherPopup" class="weather-popup">
-  <span id="closeButton" class="exit-icon">&times;</span>
-  <h2 id="weatherLocation"></h2>
-  <p id="weatherDescription"></p>
-  <p id="weatherTemperature"></p>
-</div>
-
-</body>
+    <div id="weatherPopup" class="weather-popup">
+      <span id="closeButton" class="exit-icon">&times;</span>
+      <h2 id="weatherLocation"></h2>
+      <p id="weatherDescription"></p>
+      <p id="weatherTemperature"></p>
+    </div>
+  </body>
 </html>
